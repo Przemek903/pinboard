@@ -1,0 +1,13 @@
+<tbody class="page">  
+	<% pins.each do |pin| %>
+	<tr class="post">
+        <td> <%= link_to(image_tag(pin.image.url, :width => "200", :height => "200"), pin) %> 
+        	<p> 
+        		<strong>Nazwa:</strong><%= pin.name %> 
+        	</p> 
+        	<p> 
+        		<strong>Tablica:</strong><%= pin.board.title %> 
+        	</p> <br/>
+    </tr>
+	<% end %>
+</tbody>
